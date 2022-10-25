@@ -1,0 +1,98 @@
+{
+    "1": {
+        "name": "New Jersey Devils"
+    },
+    "2": {
+        "name": "New York Islanders"
+    },
+    "3": {
+        "name": "New York Rangers"
+    },
+    "4": {
+        "name": "Philadelphia Flyers"
+    },
+    "5": {
+        "name": "Pittsburgh Penguins"
+    },
+    "6": {
+        "name": "Boston Bruins"
+    },
+    "7": {
+        "name": "Buffalo Sabres"
+    },
+    "8": {
+        "name": "Montreal Canadiens"
+    },
+    "9": {
+        "name": "Ottawa Senators"
+    },
+    "10": {
+        "name": "Toronto Maple Leafs"
+    },
+    "12": {
+        "name": "Carolina Hurricanes"
+    },
+    "13": {
+        "name": "Florida Panthers"
+    },
+    "14": {
+        "name": "Tampa Bay Lightning"
+    },
+    "15": {
+        "name": "Washington Capitals"
+    },
+    "16": {
+        "name": "Chicago Blackhawks"
+    },
+    "17": {
+        "name": "Detroit Red Wings"
+    },
+    "18": {
+        "name": "Nashville Predators"
+    },
+    "19": {
+        "name": "St. Louis Blues"
+    },
+    "20": {
+        "name": "Calgary Flames"
+    },
+    "21": {
+        "name": "Colorado Avalanche"
+    },
+    "22": {
+        "name": "Edmonton Oilers"
+    },
+    "23": {
+        "name": "Vancouver Canucks"
+    },
+    "24": {
+        "name": "Anaheim Ducks"
+    },
+    "25": {
+        "name": "Dallas Stars"
+    },
+    "26": {
+        "name": "Los Angeles Kings"
+    },
+    "28": {
+        "name": "San Jose Sharks"
+    },
+    "29": {
+        "name": "Columbus Blue Jackets"
+    },
+    "30": {
+        "name": "Minnesota Wild"
+    },
+    "52": {
+        "name": "Winnipeg Jets"
+    },
+    "53": {
+        "name": "Arizona Coyotes"
+    },
+    "54": {
+        "name": "Vegas Golden Knights"
+    },
+    "55": {
+        "name": "Seattle Kraken"
+    }
+}
