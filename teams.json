@@ -1,98 +1,130 @@
 {
     "1": {
-        "name": "New Jersey Devils"
+        "name": "New Jersey Devils",
+        "abbr": "NJD"
     },
     "2": {
-        "name": "New York Islanders"
+        "name": "New York Islanders",
+        "abbr": "NYI"
     },
     "3": {
-        "name": "New York Rangers"
+        "name": "New York Rangers",
+        "abbr": "NYR"
     },
     "4": {
-        "name": "Philadelphia Flyers"
+        "name": "Philadelphia Flyers",
+        "abbr": "PHI"
     },
     "5": {
-        "name": "Pittsburgh Penguins"
+        "name": "Pittsburgh Penguins",
+        "abbr": "PIT"
     },
     "6": {
-        "name": "Boston Bruins"
+        "name": "Boston Bruins",
+        "abbr": "BOS"
     },
     "7": {
-        "name": "Buffalo Sabres"
+        "name": "Buffalo Sabres",
+        "abbr": "BUF"
     },
     "8": {
-        "name": "Montreal Canadiens"
+        "name": "Montreal Canadiens",
+        "abbr": "MTL"
     },
     "9": {
-        "name": "Ottawa Senators"
+        "name": "Ottawa Senators",
+        "abbr": "OTT"
     },
     "10": {
-        "name": "Toronto Maple Leafs"
+        "name": "Toronto Maple Leafs",
+        "abbr": "TOR"
     },
     "12": {
-        "name": "Carolina Hurricanes"
+        "name": "Carolina Hurricanes",
+        "abbr": "CAR"
     },
     "13": {
-        "name": "Florida Panthers"
+        "name": "Florida Panthers",
+        "abbr": "FLA"
     },
     "14": {
-        "name": "Tampa Bay Lightning"
+        "name": "Tampa Bay Lightning",
+        "abbr": "TBL"
     },
     "15": {
-        "name": "Washington Capitals"
+        "name": "Washington Capitals",
+        "abbr": "WSH"
     },
     "16": {
-        "name": "Chicago Blackhawks"
+        "name": "Chicago Blackhawks",
+        "abbr": "CHI"
     },
     "17": {
-        "name": "Detroit Red Wings"
+        "name": "Detroit Red Wings",
+        "abbr": "DET"
     },
     "18": {
-        "name": "Nashville Predators"
+        "name": "Nashville Predators",
+        "abbr": "NSH"
     },
     "19": {
-        "name": "St. Louis Blues"
+        "name": "St. Louis Blues",
+        "abbr": "STL"
     },
     "20": {
-        "name": "Calgary Flames"
+        "name": "Calgary Flames",
+        "abbr": "CAL"
     },
     "21": {
-        "name": "Colorado Avalanche"
+        "name": "Colorado Avalanche",
+        "abbr": "COL"
     },
     "22": {
-        "name": "Edmonton Oilers"
+        "name": "Edmonton Oilers",
+        "abbr": "EDM"
     },
     "23": {
-        "name": "Vancouver Canucks"
+        "name": "Vancouver Canucks",
+        "abbr": "VAN"
     },
     "24": {
-        "name": "Anaheim Ducks"
+        "name": "Anaheim Ducks",
+        "abbr": "ANA"
     },
     "25": {
-        "name": "Dallas Stars"
+        "name": "Dallas Stars",
+        "abbr": "DAL"
     },
     "26": {
-        "name": "Los Angeles Kings"
+        "name": "Los Angeles Kings",
+        "abbr": "LAK"
     },
     "28": {
-        "name": "San Jose Sharks"
+        "name": "San Jose Sharks",
+        "abbr": "SJS"
     },
     "29": {
-        "name": "Columbus Blue Jackets"
+        "name": "Columbus Blue Jackets",
+        "abbr": "CBJ"
     },
     "30": {
-        "name": "Minnesota Wild"
+        "name": "Minnesota Wild",
+        "abbr": "MIN"
     },
     "52": {
-        "name": "Winnipeg Jets"
+        "name": "Winnipeg Jets",
+        "abbr": "WPG"
     },
     "53": {
-        "name": "Arizona Coyotes"
+        "name": "Arizona Coyotes",
+        "abbr": "ARI"
     },
     "54": {
-        "name": "Vegas Golden Knights"
+        "name": "Vegas Golden Knights",
+        "abbr": "VGK"
     },
     "55": {
-        "name": "Seattle Kraken"
+        "name": "Seattle Kraken",
+        "abbr": "SEA"
     }
 }

@@ -14,14 +14,14 @@ const Roster = ({ teamID }) => {
     if (error) return <Text>An error has occurred...</Text>;
 
     return (
-        <>
-            <Text>Roster</Text>
-            <ScrollView>
+        <View className="px-7 h-96">
+            <Text className="mb-3 text-lg">Roster</Text>
+            <ScrollView className="bg-white rounded-xl px-5">
                 {data.map((player) => (
                     <PlayerOverviewRow key={player.person.id} player={player} />
                 ))}
             </ScrollView>
-        </>
+        </View>
     );
 };
 
