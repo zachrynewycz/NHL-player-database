@@ -1,5 +1,5 @@
 import HomeScreen from "./components/Home/HomeScreen";
-import TeamScreen from "./components/TeamOverview/TeamScreen";
+import TeamScreen from "./components/Team/TeamScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 

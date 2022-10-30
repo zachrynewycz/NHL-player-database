@@ -20,7 +20,7 @@ const HomeScreen = () => {
             <TeamSelection selectedTeamID={selectedTeamID} setSelectedTeamID={setSelectedTeamID} />
 
             <TouchableOpacity disabled={selectedTeamID === null} onPress={goToTeamPage}>
-                <Text className="bg-[#131313] text-white font-semibold text-center w-[90%] mx-auto mb-7 py-3">Go</Text>
+                <Text className="bg-[#131313] text-white font-semibold text-center text-xl w-[90%] mx-auto mb-10 py-3">Go</Text>
             </TouchableOpacity>
         </>
     );

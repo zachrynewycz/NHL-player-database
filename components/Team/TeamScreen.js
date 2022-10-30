@@ -1,7 +1,8 @@
 import { View } from "react-native";
-import Roster from "./Roster";
-import TeamBanner from "./TeamBanner";
+import Roster from "./Roster/Roster";
+import Banner from "./Banner";
 import { QueryClient, QueryClientProvider } from "react-query";
+import StatsScrollbar from "./StatsScrollbar/StatsScrollbar";
 
 const queryClient = new QueryClient();
 
@@ -11,7 +12,8 @@ const TeamScreen = ({ route }) => {
     return (
         <QueryClientProvider client={queryClient}>
             <View>
-                <TeamBanner teamID={id} />
+                <Banner teamID={id} />
+                <StatsScrollbar teamID={id} />
                 <Roster teamID={id} />
             </View>
         </QueryClientProvider>

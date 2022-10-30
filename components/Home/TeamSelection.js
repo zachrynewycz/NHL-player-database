@@ -11,7 +11,7 @@ const TeamSelection = ({ selectedTeamID, setSelectedTeamID }) => {
                 <TouchableOpacity onPress={() => setSelectedTeamID(item)} className="w-1/3">
                     <Image
                         style={{ backgroundColor: selectedTeamID === item ? "#999999" : "#e3e3e3" }}
-                        className="w-20 h-20 m-auto my-5 rounded-full"
+                        className="w-20 h-20 m-auto my-4 rounded-full"
                         source={ImageAssets[item]}
                     />
                 </TouchableOpacity>
