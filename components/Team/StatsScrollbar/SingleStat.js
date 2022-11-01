@@ -1,11 +1,17 @@
+import { useFonts, Poppins_700Bold, Poppins_600SemiBold } from "@expo-google-fonts/poppins";
 import { View, Text } from "react-native";
 
 const SingleStat = ({ heading, value }) => {
-    //h-5 for now since it cuts off values
+    const [fontsLoaded] = useFonts({ Poppins_700Bold, Poppins_600SemiBold });
+
     return (
         <View className="mx-5">
-            <Text className="h-6">{heading}</Text>
-            <Text>{value}</Text>
+            <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="h-5.5 text-neutral-300">
+                {heading}
+            </Text>
+            <Text style={{ fontFamily: "Poppins_700Bold" }} className="text-xl text-neutral-800">
+                {value}
+            </Text>
         </View>
     );
 };

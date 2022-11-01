@@ -16,7 +16,7 @@ const TeamSelection = ({ selectedTeamID, setSelectedTeamID }) => {
                     />
                 </TouchableOpacity>
             )}
-            keyExtractor={(item, index) => index}
+            keyExtractor={(index) => index}
             numColumns={3}
         />
     );

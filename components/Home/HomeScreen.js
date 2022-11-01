@@ -1,22 +1,33 @@
 import { useState } from "react";
-import { Text, TouchableOpacity } from "react-native";
-import UnderlinedHeading from "../General/UnderlinedHeading";
-import TeamSelection from "./TeamSelection";
+import { Text, TouchableOpacity, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import { useFonts, Poppins_700Bold } from "@expo-google-fonts/poppins";
+import TeamSelection from "./TeamSelection";
 
 const HomeScreen = () => {
     const [selectedTeamID, setSelectedTeamID] = useState();
+    const [fontsLoaded] = useFonts({ Poppins_700Bold });
     const nav = useNavigation();
 
+    if (!fontsLoaded) {
+        return null;
+    }
+
     const goToTeamPage = () => {
-        nav.navigate("TeamOverview", {
+        nav.navigate("Team", {
             id: selectedTeamID,
         });
     };
 
     return (
         <>
-            <UnderlinedHeading heading="Choose your team" />
+            <View className="relative top-20 left-7 mb-5">
+                <Text style={{ fontFamily: "Poppins_700Bold" }} className="text-3xl text-[#131313]">
+                    Choose your team
+                </Text>
+                <View className="w-16 mt-2 h-1 bg-[#131313]" />
+            </View>
+
             <TeamSelection selectedTeamID={selectedTeamID} setSelectedTeamID={setSelectedTeamID} />
 
             <TouchableOpacity disabled={selectedTeamID === null} onPress={goToTeamPage}>
