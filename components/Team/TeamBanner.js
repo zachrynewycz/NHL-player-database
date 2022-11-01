@@ -4,7 +4,9 @@ import { ImageAssets } from "../../assets/ImageAssets";
 import { useFonts, Poppins_700Bold } from "@expo-google-fonts/poppins";
 
 const TeamBanner = ({ teamID }) => {
-    const [fontsLoaded] = useFonts({ Poppins_700Bold });
+    const [fontLoading] = useFonts({ Poppins_700Bold });
+
+    if (!fontLoading) return null;
 
     return (
         <View className="relative bg-white">
@@ -12,7 +14,7 @@ const TeamBanner = ({ teamID }) => {
             <Text style={{ fontFamily: "Poppins_700Bold" }} className="text-center text-2xl text-neutral-800">
                 {teams[teamID].name}
             </Text>
-            <View className="w-full bg-neutral-200 h-[1] mt-4" />
+            <View className="w-full bg-neutral-200 h-[1] mt-3" />
         </View>
     );
 };

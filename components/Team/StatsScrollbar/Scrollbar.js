@@ -2,11 +2,12 @@ import { ScrollView, Text } from "react-native";
 import { useQuery } from "react-query";
 import { fetchTeamStats } from "../../../api/fetchTeamStats";
 import SingleStat from "./SingleStat";
+import Loading from "../../General/Loading";
 
 const Scrollbar = ({ teamID }) => {
     const { data, isLoading } = useQuery("stats", () => fetchTeamStats(teamID));
 
-    if (isLoading) return <Text>Loading...</Text>;
+    if (isLoading) return <Loading />;
 
     return (
         <ScrollView horizontal className="px-5 py-3 mb-8 bg-white">

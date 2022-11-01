@@ -6,6 +6,9 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 const Stack = createStackNavigator();
 
+//Game replays/ news????
+// https://statsapi.web.nhl.com/api/v1/game/2017020608/content
+
 export default function App() {
     return (
         <NavigationContainer>

@@ -1,10 +1,10 @@
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { useFonts, Poppins_600SemiBold } from "@expo-google-fonts/poppins";
+import { useFonts, Poppins_600SemiBold, Poppins_700Bold } from "@expo-google-fonts/poppins";
 
 const PlayerOverviewRow = ({ player }) => {
     const nav = useNavigation();
-    const [fontsLoaded] = useFonts({ Poppins_600SemiBold });
+    const [fontsLoaded] = useFonts({ Poppins_600SemiBold, Poppins_700Bold });
 
     if (!fontsLoaded) return null;
 
@@ -24,16 +24,16 @@ const PlayerOverviewRow = ({ player }) => {
                             uri: `https://cms.nhl.bamgrid.com/images/headshots/current/168x168/${player.person.id}@3x.png`,
                         }}
                     />
-                    <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="ml-3">
+                    <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="ml-4">
                         {player.person.fullName}
                     </Text>
                 </View>
 
                 <View className="flex flex-row justify-around w-1/4 items-center">
-                    <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="text-base text-neutral-600">
+                    <Text style={{ fontFamily: "Poppins_700Bold" }} className="text-base text-neutral-600">
                         {player.jerseyNumber}
                     </Text>
-                    <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="text-base text-neutral-600">
+                    <Text style={{ fontFamily: "Poppins_700Bold" }} className="text-base text-neutral-600">
                         {player.position.abbreviation}
                     </Text>
                 </View>

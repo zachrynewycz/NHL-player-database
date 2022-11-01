@@ -1,7 +1,7 @@
 import { ScrollView } from "react-native";
-import Roster from "./Roster/Roster";
-import Banner from "./Banner";
 import { QueryClient, QueryClientProvider } from "react-query";
+import Roster from "./Roster/Roster";
+import TeamBanner from "./TeamBanner";
 import LastGame from "./LastGame";
 import Scrollbar from "./StatsScrollbar/Scrollbar";
 
@@ -13,7 +13,7 @@ const TeamScreen = ({ route }) => {
     return (
         <QueryClientProvider client={queryClient}>
             <ScrollView className="bg-[#f9f9fb]">
-                <Banner teamID={id} />
+                <TeamBanner teamID={id} />
                 <Scrollbar teamID={id} />
                 <LastGame teamID={id} />
                 <Roster teamID={id} />
