@@ -4,9 +4,9 @@ import { ImageAssets } from "../../assets/ImageAssets";
 import { useFonts, Poppins_700Bold } from "@expo-google-fonts/poppins";
 
 const TeamBanner = ({ teamID }) => {
-    const [fontLoading] = useFonts({ Poppins_700Bold });
+    const [fontLoaded] = useFonts({ Poppins_700Bold });
 
-    if (!fontLoading) return null;
+    if (!fontLoaded) return null;
 
     return (
         <View className="relative bg-white">

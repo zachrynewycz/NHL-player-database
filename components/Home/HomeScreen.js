@@ -9,9 +9,7 @@ const HomeScreen = () => {
     const [fontsLoaded] = useFonts({ Poppins_700Bold });
     const nav = useNavigation();
 
-    if (!fontsLoaded) {
-        return null;
-    }
+    if (!fontsLoaded) return null;
 
     const goToTeamPage = () => {
         nav.navigate("Team", {
