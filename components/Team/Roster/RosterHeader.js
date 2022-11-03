@@ -7,7 +7,7 @@ const RosterHeader = () => {
     if (!fontsLoaded) return null;
 
     return (
-        <View className="flex flex-row items-center py-4 bg-neutral-800 rounded-t-xl">
+        <View className="flex flex-row items-center py-4 bg-neutral-800 rounded-t-lg">
             <View className="w-3/4">
                 <Text style={{ fontFamily: "Poppins_500Medium" }} className="ml-4 text-white">
                     Player

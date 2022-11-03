@@ -2,9 +2,12 @@ import { View, Text, Image } from "react-native";
 import teams from "../../teams.json";
 import { ImageAssets } from "../../assets/ImageAssets";
 import { useFonts, Poppins_700Bold } from "@expo-google-fonts/poppins";
+import { teamIDContext } from "../../context/TeamProvider";
+import { useContext } from "react";
 
-const TeamBanner = ({ teamID }) => {
+const TeamBanner = () => {
     const [fontLoaded] = useFonts({ Poppins_700Bold });
+    const [teamID] = useContext(teamIDContext);
 
     if (!fontLoaded) return null;
 

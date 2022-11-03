@@ -1,17 +1,17 @@
 import { View, Text, Image } from "react-native";
-
 import { useQuery } from "react-query";
 import { useFonts, Poppins_700Bold, Poppins_600SemiBold } from "@expo-google-fonts/poppins";
 import { format } from "date-fns";
-
 import { fetchLastGame } from "../../api/fetchLastGame";
 import { ImageAssets } from "../../assets/ImageAssets";
-
+import { teamIDContext } from "../../context/TeamProvider";
+import { useContext } from "react";
 import Loading from "../General/Loading";
 import Error from "../General/Error";
 import teams from "../../teams.json";
 
-const LastGame = ({ teamID }) => {
+const LastGame = () => {
+    const [teamID] = useContext(teamIDContext);
     const [fontsLoaded] = useFonts({ Poppins_700Bold, Poppins_600SemiBold });
     const { data, isLoading, error } = useQuery("game", () => fetchLastGame(teamID));
 
@@ -28,6 +28,7 @@ const LastGame = ({ teamID }) => {
             </Text>
 
             <View className="flex flex-row items-center justify-center rounded-xl bg-white py-3">
+                {/* Away team */}
                 <View className="flex flex-row items-center">
                     <Image
                         className="w-16 h-16 mx-1"
@@ -38,6 +39,7 @@ const LastGame = ({ teamID }) => {
                     </Text>
                 </View>
 
+                {/* Scores */}
                 <View>
                     <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="mx-6 text-xl">
                         {data[0].previousGameSchedule.dates[0].games[0].teams.away.score}
@@ -52,11 +54,11 @@ const LastGame = ({ teamID }) => {
                     </View>
                 </View>
 
+                {/* Home team */}
                 <View className="flex flex-row items-center">
                     <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="text-neutral-700">
                         {teams[data[0].previousGameSchedule.dates[0].games[0].teams.home.team.id].abbr}
                     </Text>
-
                     <Image
                         className="w-16 h-16 mx-1"
                         source={ImageAssets[data[0].previousGameSchedule.dates[0].games[0].teams.home.team.id]}

@@ -1,10 +1,13 @@
-import { ScrollView, Text } from "react-native";
+import { ScrollView } from "react-native";
 import { useQuery } from "react-query";
 import { fetchTeamStats } from "../../../api/fetchTeamStats";
+import { teamIDContext } from "../../../context/TeamProvider";
+import { useContext } from "react";
 import SingleStat from "./SingleStat";
 import Loading from "../../General/Loading";
 
-const Scrollbar = ({ teamID }) => {
+const Scrollbar = () => {
+    const [teamID] = useContext(teamIDContext);
     const { data, isLoading } = useQuery("stats", () => fetchTeamStats(teamID));
 
     if (isLoading) return <Loading />;
