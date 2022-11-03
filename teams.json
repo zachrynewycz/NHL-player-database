@@ -1,130 +1,162 @@
 {
     "1": {
         "name": "New Jersey Devils",
-        "abbr": "NJD"
+        "abbr": "NJD",
+        "primary": "#CE1126"
     },
     "2": {
         "name": "New York Islanders",
-        "abbr": "NYI"
+        "abbr": "NYI",
+        "primary": "#00539B"
     },
     "3": {
         "name": "New York Rangers",
-        "abbr": "NYR"
+        "abbr": "NYR",
+        "primary": "#0038A8"
     },
     "4": {
         "name": "Philadelphia Flyers",
-        "abbr": "PHI"
+        "abbr": "PHI",
+        "primary": "#F74902"
     },
     "5": {
         "name": "Pittsburgh Penguins",
-        "abbr": "PIT"
+        "abbr": "PIT",
+        "primary": "#CFC493"
     },
     "6": {
         "name": "Boston Bruins",
-        "abbr": "BOS"
+        "abbr": "BOS",
+        "primary": "#FFB81C"
     },
     "7": {
         "name": "Buffalo Sabres",
-        "abbr": "BUF"
+        "abbr": "BUF",
+        "primary": "#003087"
     },
     "8": {
         "name": "Montreal Canadiens",
-        "abbr": "MTL"
+        "abbr": "MTL",
+        "primary": "#AF1E2D"
     },
     "9": {
         "name": "Ottawa Senators",
-        "abbr": "OTT"
+        "abbr": "OTT",
+        "primary": "#DA1A32"
     },
     "10": {
         "name": "Toronto Maple Leafs",
-        "abbr": "TOR"
+        "abbr": "TOR",
+        "primary": "#00205B"
     },
     "12": {
         "name": "Carolina Hurricanes",
-        "abbr": "CAR"
+        "abbr": "CAR",
+        "primary": "#CE1126"
     },
     "13": {
         "name": "Florida Panthers",
-        "abbr": "FLA"
+        "abbr": "FLA",
+        "primary": "#041E42"
     },
     "14": {
         "name": "Tampa Bay Lightning",
-        "abbr": "TBL"
+        "abbr": "TBL",
+        "primary": "#002868"
     },
     "15": {
         "name": "Washington Capitals",
-        "abbr": "WSH"
+        "abbr": "WSH",
+        "primary": "#041E42"
     },
     "16": {
         "name": "Chicago Blackhawks",
-        "abbr": "CHI"
+        "abbr": "CHI",
+        "primary": "#CF0A2C"
     },
     "17": {
         "name": "Detroit Red Wings",
-        "abbr": "DET"
+        "abbr": "DET",
+        "primary": "#CE1126"
     },
     "18": {
         "name": "Nashville Predators",
-        "abbr": "NSH"
+        "abbr": "NSH",
+        "primary": "#041E42"
     },
     "19": {
         "name": "St. Louis Blues",
-        "abbr": "STL"
+        "abbr": "STL",
+        "primary": "#002F87"
     },
     "20": {
         "name": "Calgary Flames",
-        "abbr": "CAL"
+        "abbr": "CAL",
+        "primary": "#D2001C"
     },
     "21": {
         "name": "Colorado Avalanche",
-        "abbr": "COL"
+        "abbr": "COL",
+        "primary": "#6F263D"
     },
     "22": {
         "name": "Edmonton Oilers",
-        "abbr": "EDM"
+        "abbr": "EDM",
+        "primary": "#041E42"
     },
     "23": {
         "name": "Vancouver Canucks",
-        "abbr": "VAN"
+        "abbr": "VAN",
+        "primary": "#00205B"
     },
     "24": {
         "name": "Anaheim Ducks",
-        "abbr": "ANA"
+        "abbr": "ANA",
+        "primary": "#F47A38"
     },
     "25": {
         "name": "Dallas Stars",
-        "abbr": "DAL"
+        "abbr": "DAL",
+        "primary": "#006847"
     },
     "26": {
         "name": "Los Angeles Kings",
-        "abbr": "LAK"
+        "abbr": "LAK",
+        "primary": "#111111"
     },
     "28": {
         "name": "San Jose Sharks",
-        "abbr": "SJS"
+        "abbr": "SJS",
+        "primary": "#006D75"
     },
     "29": {
         "name": "Columbus Blue Jackets",
-        "abbr": "CBJ"
+        "abbr": "CBJ",
+        "primary": "#002654"
     },
     "30": {
         "name": "Minnesota Wild",
-        "abbr": "MIN"
+        "abbr": "MIN",
+        "primary": "#154734"
     },
     "52": {
         "name": "Winnipeg Jets",
-        "abbr": "WPG"
+        "abbr": "WPG",
+        "primary": "#041E42"
     },
     "53": {
         "name": "Arizona Coyotes",
-        "abbr": "ARI"
+        "abbr": "ARI",
+        "primary": "#8C2633"
     },
     "54": {
         "name": "Vegas Golden Knights",
-        "abbr": "VGK"
+        "abbr": "VGK",
+        "primary": "#333F42"
     },
     "55": {
         "name": "Seattle Kraken",
-        "abbr": "SEA"
+        "abbr": "SEA",
+        "primary": "#355464"
     }
 }

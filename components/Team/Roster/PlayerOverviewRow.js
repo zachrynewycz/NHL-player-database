@@ -30,10 +30,10 @@ const PlayerOverviewRow = ({ player }) => {
                 </View>
 
                 <View className="flex flex-row justify-around w-1/4 items-center">
-                    <Text style={{ fontFamily: "Poppins_700Bold" }} className="text-base text-neutral-600">
+                    <Text style={{ fontFamily: "Poppins_700Bold" }} className="text-base text-neutral-500">
                         {player.jerseyNumber}
                     </Text>
-                    <Text style={{ fontFamily: "Poppins_700Bold" }} className="text-base text-neutral-600">
+                    <Text style={{ fontFamily: "Poppins_700Bold" }} className="text-base text-neutral-500">
                         {player.position.abbreviation}
                     </Text>
                 </View>

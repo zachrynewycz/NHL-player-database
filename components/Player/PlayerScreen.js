@@ -1,4 +1,5 @@
 import { ScrollView } from "react-native";
+import CurrentStats from "./CurrentStats/CurrentStats";
 import PlayerBanner from "./PlayerBanner";
 import ScrollBar from "./VitalsScrollBar/ScrollBar";
 
@@ -9,6 +10,7 @@ const PlayerScreen = ({ route }) => {
         <ScrollView>
             <PlayerBanner playerID={id} />
             <ScrollBar playerID={id} />
+            <CurrentStats />
         </ScrollView>
     );
 };

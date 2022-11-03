@@ -1,4 +1,4 @@
-import { Image, ScrollView } from "react-native";
+import { ScrollView } from "react-native";
 import { useQuery } from "react-query";
 import { fetchPlayerDetails } from "../../../api/fetchPlayerDetails";
 import SingleVital from "./SingleVital";
@@ -18,6 +18,7 @@ const ScrollBar = ({ playerID }) => {
             <SingleVital heading="Age" value={data[0].currentAge} />
             <SingleVital heading="Height" value={data[0].height} />
             <SingleVital heading="Weight" value={data[0].weight} />
+            <SingleVital heading="Shoots" value={data[0].shootsCatches} />
             <SingleVital heading="Nationality" value={data[0].nationality} />
         </ScrollView>
     );

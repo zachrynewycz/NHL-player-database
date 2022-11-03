@@ -18,7 +18,7 @@ const RosterHeader = () => {
                 <Text style={{ fontFamily: "Poppins_500Medium" }} className="text-white">
                     #
                 </Text>
-                <Text style={{ fontFamily: "Poppins_500Medium" }} className="text-white mr-1">
+                <Text style={{ fontFamily: "Poppins_500Medium" }} className="text-white mr-2">
                     Pos
                 </Text>
             </View>
