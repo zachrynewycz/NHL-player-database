@@ -1,22 +1,26 @@
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useFonts, Poppins_600SemiBold, Poppins_700Bold } from "@expo-google-fonts/poppins";
+import { useContext } from "react";
+import { playerIDContext } from "../../../context/PlayerProvider";
 
 const PlayerOverviewRow = ({ player }) => {
     const nav = useNavigation();
+    const [playerID, setPlayerID] = useContext(playerIDContext);
     const [fontsLoaded] = useFonts({ Poppins_600SemiBold, Poppins_700Bold });
 
     if (!fontsLoaded) return null;
 
     const goToPlayerPage = () => {
+        setPlayerID(player.person.id);
         nav.navigate("Player", {
-            id: player.person.id,
+            isGoalie: player.position.abbreviation === "G",
         });
     };
 
     return (
         <TouchableOpacity onPress={goToPlayerPage}>
-            <View className="flex flex-row items-center py-4 px-3">
+            <View className="flex flex-row items-center py-3.5 px-3">
                 <View className="w-3/4 flex flex-row items-center ">
                     <Image
                         className="w-10 h-10 rounded-full bg-neutral-50"

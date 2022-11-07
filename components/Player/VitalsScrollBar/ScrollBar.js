@@ -1,11 +1,14 @@
 import { ScrollView } from "react-native";
 import { useQuery } from "react-query";
 import { fetchPlayerDetails } from "../../../api/fetchPlayerDetails";
+import { playerIDContext } from "../../../context/PlayerProvider";
+import { useContext } from "react";
 import SingleVital from "./SingleVital";
 import Loading from "../../General/Loading";
 import Error from "../../General/Error";
 
-const ScrollBar = ({ playerID }) => {
+const ScrollBar = () => {
+    const [playerID] = useContext(playerIDContext);
     const { data, isLoading, error } = useQuery("vitals", () => fetchPlayerDetails(playerID));
 
     if (isLoading) return <Loading />;

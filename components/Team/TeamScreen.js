@@ -1,7 +1,7 @@
 import { ScrollView } from "react-native";
 import Roster from "./Roster/Roster";
-import TeamBanner from "./TeamBanner";
-import LastGame from "./LastGame";
+import TeamBanner from "./TeamBanner/TeamBanner";
+import LastGame from "./LastGame/LastGame";
 import Scrollbar from "./StatsScrollbar/Scrollbar";
 
 const TeamScreen = () => {

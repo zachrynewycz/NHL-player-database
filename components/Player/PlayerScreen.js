@@ -1,16 +1,17 @@
 import { ScrollView } from "react-native";
-import CurrentStats from "./CurrentStats/CurrentStats";
-import PlayerBanner from "./PlayerBanner";
+import CurrentPlayerStats from "./CurrentPlayerStats/CurrentPlayerStats";
+import CurrentGoalieStats from "./CurrentGoalieStats/CurrentGoalieStats";
+import PlayerBanner from "./PlayerBanner/PlayerBanner";
 import ScrollBar from "./VitalsScrollBar/ScrollBar";
 
 const PlayerScreen = ({ route }) => {
-    const { id } = route.params;
+    const { isGoalie } = route.params;
 
     return (
         <ScrollView>
-            <PlayerBanner playerID={id} />
-            <ScrollBar playerID={id} />
-            <CurrentStats />
+            <PlayerBanner />
+            <ScrollBar />
+            {isGoalie ? <CurrentGoalieStats /> : <CurrentPlayerStats />}
         </ScrollView>
     );
 };

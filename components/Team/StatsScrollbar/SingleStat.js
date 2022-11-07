@@ -11,7 +11,7 @@ const SingleStat = ({ heading, value }) => {
             <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="h-5.5 text-neutral-300">
                 {heading}
             </Text>
-            <Text style={{ fontFamily: "Poppins_700Bold" }} className="text-xl text-neutral-800">
+            <Text style={{ fontFamily: "Poppins_700Bold" }} className="text-xl text-neutral-700">
                 {value}
             </Text>
         </View>

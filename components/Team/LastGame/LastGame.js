@@ -2,13 +2,13 @@ import { View, Text, Image } from "react-native";
 import { useQuery } from "react-query";
 import { useFonts, Poppins_700Bold, Poppins_600SemiBold } from "@expo-google-fonts/poppins";
 import { format } from "date-fns";
-import { fetchLastGame } from "../../api/fetchLastGame";
-import { ImageAssets } from "../../assets/ImageAssets";
-import { teamIDContext } from "../../context/TeamProvider";
+import { fetchLastGame } from "../../../api/fetchLastGame";
+import { ImageAssets } from "../../../assets/ImageAssets";
+import { teamIDContext } from "../../../context/TeamProvider";
 import { useContext } from "react";
-import Loading from "../General/Loading";
-import Error from "../General/Error";
-import teams from "../../teams.json";
+import Loading from "../../General/Loading";
+import Error from "../../General/Error";
+import teams from "../../../teams.json";
 
 const LastGame = () => {
     const [teamID] = useContext(teamIDContext);
@@ -23,7 +23,7 @@ const LastGame = () => {
 
     return (
         <View className="mb-10 px-6">
-            <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="mb-3 text-2xl">
+            <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="mb-3 text-xl">
                 Last Game
             </Text>
 

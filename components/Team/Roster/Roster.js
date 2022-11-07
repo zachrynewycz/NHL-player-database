@@ -23,10 +23,10 @@ const Roster = () => {
     return (
         <View className="px-6 pb-16">
             <>
-                <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="text-2xl">
+                <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="text-xl">
                     Roster
                 </Text>
-                <Text className="text-xs text-neutral-400 mb-3">Select player to view stats</Text>
+                <Text className="text-xs text-neutral-400 mb-3">Select a player to view stats</Text>
             </>
 
             <RosterHeader />
