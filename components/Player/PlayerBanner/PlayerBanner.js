@@ -31,13 +31,13 @@ const PlayerBanner = () => {
                         style={{ fontFamily: "Poppins_700Bold" }}
                         className="text-xl text-neutral-90 break-normal leading-7 mt-5 -mb-1"
                     >
-                        {data[0].firstName?.toUpperCase()} {data[0].lastName?.toUpperCase()}
+                        {data[0].firstName} {data[0].lastName}
                     </Text>
 
                     <View className="flex flex-row items-center -ml-2">
-                        <Image className="w-11 h-11" source={ImageAssets[data[0].currentTeam.id]} />
+                        <Image className="w-10 h-10" source={ImageAssets[data[0].currentTeam.id]} />
 
-                        <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="text-center text-lg text-neutral-600">
+                        <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="text-center text-xl text-neutral-600">
                             #{data[0].primaryNumber}
                         </Text>
                     </View>

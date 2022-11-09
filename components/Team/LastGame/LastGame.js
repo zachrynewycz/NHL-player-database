@@ -24,7 +24,7 @@ const LastGame = () => {
     return (
         <View className="mb-10 px-6">
             <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="mb-3 text-xl">
-                Last Game
+                Last game
             </Text>
 
             <View className="flex flex-row items-center justify-center rounded-xl bg-white py-3">

@@ -16,7 +16,7 @@ const ScrollBar = () => {
     if (error) return <Error />;
 
     return (
-        <ScrollView horizontal className="px-5 py-3 mb-8 bg-white">
+        <ScrollView horizontal className="px-5 py-2.5 mb-8 bg-white">
             <SingleVital heading="Position" value={data[0].primaryPosition.abbreviation} />
             <SingleVital heading="Age" value={data[0].currentAge} />
             <SingleVital heading="Height" value={data[0].height} />

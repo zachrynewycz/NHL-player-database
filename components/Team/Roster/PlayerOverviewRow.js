@@ -1,13 +1,13 @@
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { useFonts, Poppins_600SemiBold, Poppins_700Bold } from "@expo-google-fonts/poppins";
+import { useFonts, Poppins_600SemiBold, Poppins_500Medium } from "@expo-google-fonts/poppins";
 import { useContext } from "react";
 import { playerIDContext } from "../../../context/PlayerProvider";
 
 const PlayerOverviewRow = ({ player }) => {
     const nav = useNavigation();
     const [playerID, setPlayerID] = useContext(playerIDContext);
-    const [fontsLoaded] = useFonts({ Poppins_600SemiBold, Poppins_700Bold });
+    const [fontsLoaded] = useFonts({ Poppins_600SemiBold, Poppins_500Medium });
 
     if (!fontsLoaded) return null;
 
@@ -34,10 +34,10 @@ const PlayerOverviewRow = ({ player }) => {
                 </View>
 
                 <View className="flex flex-row justify-around w-1/4 items-center">
-                    <Text style={{ fontFamily: "Poppins_700Bold" }} className="text-base text-neutral-500">
+                    <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="text-base">
                         {player.jerseyNumber}
                     </Text>
-                    <Text style={{ fontFamily: "Poppins_700Bold" }} className="text-base text-neutral-500">
+                    <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="text-base">
                         {player.position.abbreviation}
                     </Text>
                 </View>

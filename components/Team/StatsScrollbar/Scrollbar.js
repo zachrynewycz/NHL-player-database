@@ -13,7 +13,7 @@ const Scrollbar = () => {
     if (isLoading) return <Loading />;
 
     return (
-        <ScrollView horizontal className="px-5 py-3 mb-8 bg-white">
+        <ScrollView horizontal className="px-5 py-2.5 mb-8 bg-white">
             <SingleStat heading="Wins" value={data[0].teamStats[0].splits[0].stat.wins} />
             <SingleStat heading="Losses" value={data[0].teamStats[0].splits[0].stat.losses} />
             <SingleStat heading="OT" value={data[0].teamStats[0].splits[0].stat.ot} />

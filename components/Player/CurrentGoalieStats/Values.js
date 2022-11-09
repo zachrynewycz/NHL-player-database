@@ -27,7 +27,7 @@ const Values = () => {
                 {data[0].splits[0].stat.saves}
             </Text>
             <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="text-base">
-                {data[0].splits[0].stat.savePercentage}
+                {data[0].splits[0].stat.savePercentage?.toFixed(3)}
             </Text>
         </View>
     );
