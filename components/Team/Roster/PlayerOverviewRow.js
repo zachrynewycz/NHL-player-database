@@ -20,29 +20,22 @@ const PlayerOverviewRow = ({ player }) => {
 
     return (
         <TouchableOpacity onPress={goToPlayerPage}>
-            <View className="flex flex-row items-center py-3.5 px-3">
-                <View className="w-3/4 flex flex-row items-center ">
+            <View className="flex flex-row items-center p-3 border-b-[1px] border-neutral-100">
+                <View className="w-3/4 flex flex-row items-center">
                     <Image
-                        className="w-10 h-10 rounded-full bg-neutral-50"
+                        className="w-10 h-10 rounded-full border-[0.5px] border-neutral-400"
                         source={{
                             uri: `https://cms.nhl.bamgrid.com/images/headshots/current/168x168/${player.person.id}@3x.png`,
                         }}
                     />
-                    <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="ml-4">
-                        {player.person.fullName}
-                    </Text>
+                    <Text className="ml-4 font-medium">{player.person.fullName}</Text>
                 </View>
 
                 <View className="flex flex-row justify-around w-1/4 items-center">
-                    <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="text-base">
-                        {player.jerseyNumber}
-                    </Text>
-                    <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="text-base">
-                        {player.position.abbreviation}
-                    </Text>
+                    <Text className="text-base font-semibold">{player.jerseyNumber}</Text>
+                    <Text className="text-base font-semibold">{player.position.abbreviation}</Text>
                 </View>
             </View>
-            <View className="absolute bottom-0 w-full h-[1] bg-neutral-200" />
         </TouchableOpacity>
     );
 };

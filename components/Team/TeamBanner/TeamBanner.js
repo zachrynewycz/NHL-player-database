@@ -19,7 +19,7 @@ const TeamBanner = () => {
 
     return (
         <View className="bg-white">
-            <View className="flex flex-row mt-10 py-6 items-center">
+            <View className="flex flex-row mt-10 py-5 items-center">
                 <View style={{ backgroundColor: teams[teamID].primary }} className="mx-5 rounded-full w-20 h-20">
                     <Image className="w-20 h-20 mt-0.5" source={ImageAssets[teamID]} />
                 </View>
@@ -28,7 +28,7 @@ const TeamBanner = () => {
                     <Text style={{ fontFamily: "Poppins_700Bold" }} className="text-center text-xl text-neutral-800">
                         {teams[teamID].name}
                     </Text>
-                    <Text className="text-sm">{data[0].division.name} Division</Text>
+                    <Text className="text-xs">{data[0].division.name} Division</Text>
                 </View>
             </View>
 

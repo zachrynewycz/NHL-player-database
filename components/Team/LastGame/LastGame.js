@@ -1,6 +1,5 @@
 import { View, Text, Image } from "react-native";
 import { useQuery } from "react-query";
-import { useFonts, Poppins_700Bold, Poppins_600SemiBold } from "@expo-google-fonts/poppins";
 import { format } from "date-fns";
 import { fetchLastGame } from "../../../api/fetchLastGame";
 import { ImageAssets } from "../../../assets/ImageAssets";
@@ -9,39 +8,33 @@ import { useContext } from "react";
 import Loading from "../../General/Loading";
 import Error from "../../General/Error";
 import teams from "../../../teams.json";
+import SectionTitle from "../../General/SectionTitle";
 
 const LastGame = () => {
     const [teamID] = useContext(teamIDContext);
-    const [fontsLoaded] = useFonts({ Poppins_700Bold, Poppins_600SemiBold });
     const { data, isLoading, error } = useQuery("game", () => fetchLastGame(teamID));
-
-    if (!fontsLoaded) return null;
 
     if (isLoading) return <Loading />;
 
     if (error) return <Error />;
 
     return (
-        <View className="mb-10 px-6">
-            <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="mb-3 text-xl">
-                Last game
-            </Text>
+        <View className="mb-10 px-5">
+            <SectionTitle title="Last game" />
 
-            <View className="flex flex-row items-center justify-center rounded-xl bg-white py-3">
+            <View className="flex flex-row items-center justify-center rounded-lg bg-white py-3">
                 {/* Away team */}
                 <View className="flex flex-row items-center">
                     <Image
-                        className="w-16 h-16 mx-1"
+                        className="w-16 h-16 mr-1"
                         source={ImageAssets[data[0].previousGameSchedule.dates[0].games[0].teams.away.team.id]}
                     />
-                    <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="text-neutral-700">
-                        {teams[data[0].previousGameSchedule.dates[0].games[0].teams.away.team.id].abbr}
-                    </Text>
+                    <Text>{teams[data[0].previousGameSchedule.dates[0].games[0].teams.away.team.id].abbr}</Text>
                 </View>
 
                 {/* Scores */}
-                <View>
-                    <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="mx-6 text-xl">
+                <View className="mx-5">
+                    <Text className="text-xl text-center font-semibold">
                         {data[0].previousGameSchedule.dates[0].games[0].teams.away.score}
                         <Text> - </Text>
                         {data[0].previousGameSchedule.dates[0].games[0].teams.home.score}
@@ -56,11 +49,9 @@ const LastGame = () => {
 
                 {/* Home team */}
                 <View className="flex flex-row items-center">
-                    <Text style={{ fontFamily: "Poppins_600SemiBold" }} className="text-neutral-700">
-                        {teams[data[0].previousGameSchedule.dates[0].games[0].teams.home.team.id].abbr}
-                    </Text>
+                    <Text>{teams[data[0].previousGameSchedule.dates[0].games[0].teams.home.team.id].abbr}</Text>
                     <Image
-                        className="w-16 h-16 mx-1"
+                        className="w-16 h-16 ml-1"
                         source={ImageAssets[data[0].previousGameSchedule.dates[0].games[0].teams.home.team.id]}
                     />
                 </View>

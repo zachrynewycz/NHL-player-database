@@ -1,13 +1,7 @@
-import Spinner from "react-native-loading-spinner-overlay";
-import { View, Text } from "react-native";
+import { Text } from "react-native";
 
 const Loading = () => {
-    return (
-        <View className="flex justify-center items-center">
-            <Text>Loading</Text>
-            <Spinner />
-        </View>
-    );
+    return <Text className="text-center text-xl my-5">Loading...</Text>;
 };
 
 export default Loading;
