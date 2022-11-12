@@ -1,7 +1,7 @@
 import { useFonts, Poppins_700Bold, Poppins_600SemiBold } from "@expo-google-fonts/poppins";
 import { View, Text } from "react-native";
 
-const SingleStat = ({ heading, value }) => {
+const ScrollItem = ({ heading, value }) => {
     const [fontsLoaded] = useFonts({ Poppins_700Bold, Poppins_600SemiBold });
 
     if (!fontsLoaded) return null;
@@ -18,4 +18,4 @@ const SingleStat = ({ heading, value }) => {
     );
 };
 
-export default SingleStat;
+export default ScrollItem;

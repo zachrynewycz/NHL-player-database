@@ -15,17 +15,15 @@ const PlayerCurrentStats = () => {
     if (isLoading) return <Loading />;
 
     return (
-        <View className="px-5 mb-16">
-            <SectionTitle title={`${format(new Date(), "RRRR")} Stats`} />
+        <View className="px-5">
+            <SectionTitle title={`${format(new Date(), "RRRR")} Season`} />
 
-            <View className="flex flex-row justify-around px-2">
+            <View className="flex flex-row justify-around -my-3">
                 <Stat statName="GP" value={data[0].splits[0].stat.games} />
                 <Stat statName="G" value={data[0].splits[0].stat.goals} />
                 <Stat statName="A" value={data[0].splits[0].stat.assists} />
                 <Stat statName="P" value={data[0].splits[0].stat.points} />
                 <Stat statName="+/-" value={data[0].splits[0].stat.plusMinus} />
-                <Stat statName="TOI/G" value={data[0].splits[0].stat.timeOnIcePerGame} />
-                <Stat statName="PM" value={data[0].splits[0].stat.penaltyMinutes} />
             </View>
         </View>
     );

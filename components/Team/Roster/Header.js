@@ -1,7 +1,7 @@
 import { Text, View } from "react-native";
 import { useFonts, Poppins_500Medium } from "@expo-google-fonts/poppins";
 
-const RosterHeader = () => {
+const Header = () => {
     const [fontsLoaded] = useFonts({ Poppins_500Medium });
 
     if (!fontsLoaded) return null;
@@ -18,7 +18,7 @@ const RosterHeader = () => {
                 <Text style={{ fontFamily: "Poppins_500Medium" }} className="text-white">
                     #
                 </Text>
-                <Text style={{ fontFamily: "Poppins_500Medium" }} className="text-white mr-2">
+                <Text style={{ fontFamily: "Poppins_500Medium" }} className="text-white mr-3">
                     Pos
                 </Text>
             </View>
@@ -26,4 +26,4 @@ const RosterHeader = () => {
     );
 };
 
-export default RosterHeader;
+export default Header;
