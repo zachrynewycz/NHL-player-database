@@ -14,6 +14,7 @@ const TeamScreen = () => {
                 <LastGame />
                 <SectionBreak />
                 <Roster />
+                <SectionBreak />
             </ScrollView>
         </SafeAreaView>
     );

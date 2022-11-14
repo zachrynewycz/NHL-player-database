@@ -1,4 +1,4 @@
-import { Text, TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity, View, SafeAreaView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useFonts, Poppins_700Bold } from "@expo-google-fonts/poppins";
 import TeamSelection from "./TeamSelection";
@@ -17,8 +17,8 @@ const HomeScreen = () => {
     };
 
     return (
-        <>
-            <View className="relative top-20 left-7 mb-5">
+        <SafeAreaView>
+            <View className="left-7 mt-10 mb-5">
                 <Text style={{ fontFamily: "Poppins_700Bold" }} className="text-3xl text-[#131313]">
                     Choose your team
                 </Text>
@@ -28,9 +28,9 @@ const HomeScreen = () => {
             <TeamSelection />
 
             <TouchableOpacity disabled={!teamID} onPress={goToTeamPage}>
-                <Text className="bg-[#131313] text-white font-semibold text-center text-xl w-[90%] mx-auto mb-10 py-3">Go</Text>
+                <Text className="bg-[#131313] text-white font-semibold text-center text-xl w-[90%] mx-auto py-3">Go</Text>
             </TouchableOpacity>
-        </>
+        </SafeAreaView>
     );
 };
 

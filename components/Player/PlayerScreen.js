@@ -18,6 +18,7 @@ const PlayerScreen = ({ route }) => {
                 {isGoalie ? <GoalieCurrentStats /> : <PlayerCurrentStats />}
                 <SectionBreak />
                 {isGoalie ? <GoalieCareerStats /> : <PlayerCareerStats />}
+                <SectionBreak />
             </ScrollView>
         </SafeAreaView>
     );

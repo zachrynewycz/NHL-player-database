@@ -9,10 +9,10 @@ const TeamSelection = () => {
 
     return (
         <FlatList
-            className="mt-20"
+            className="h-[570px]"
             data={Object.keys(teams)}
             renderItem={({ item }) => (
-                <TouchableOpacity onPress={() => setTeamID(item)} className="w-1/3">
+                <TouchableOpacity onPress={() => (teamID === item ? setTeamID("") : setTeamID(item))} className="w-1/3">
                     <Image
                         style={{ backgroundColor: teamID === item ? "#999999" : "#e3e3e3" }}
                         className="w-20 h-20 m-auto my-4 rounded-full"
