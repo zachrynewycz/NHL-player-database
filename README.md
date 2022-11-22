@@ -1,7 +1,7 @@
 
 # NHL Player Database
 
-Developed a mobile app with React Native to track the lastest stats for players in the National Hockey Leauge 🏒. Below is a list of what you can view.
+Developed a mobile app to track the lastest stats for players in the National Hockey Leauge 🏒. Below is a list of what you can view.
 
 #### Team Stats: 
 - Highlight video from previous played game
@@ -25,9 +25,8 @@ Developed a mobile app with React Native to track the lastest stats for players 
 
 ## Screenshots
 
-![IMG_5178](https://user-images.githubusercontent.com/85086293/203192927-e6ecfac3-863d-41a0-a04c-f214c3fbbcee.PNG)
-![IMG_5177](https://user-images.githubusercontent.com/85086293/203193043-fb3bd874-f7f7-4b71-90ce-1660e0dd5b63.PNG)
-![IMG_5179](https://user-images.githubusercontent.com/85086293/203193086-cc972394-dfe7-46a4-a0ac-d6cf34ac4a5e.PNG)
-![IMG_5180](https://user-images.githubusercontent.com/85086293/203193139-86494080-1e81-4426-84ae-851d2380715a.PNG)
+![1](https://user-images.githubusercontent.com/85086293/203212827-546a7c6d-af44-4e3b-9461-71f3b559879f.jpg)
 
+
+![2](https://user-images.githubusercontent.com/85086293/203212847-3c77df9a-5b5a-4da7-9391-e40d647b8141.jpg)
 
