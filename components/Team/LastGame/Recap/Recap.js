@@ -6,12 +6,15 @@ import SectionTitle from "../../../General/SectionTitle";
 import Thumbnail from "./Thumbnail";
 import Loading from "../../../General/Loading";
 import HighlightVideo from "./HighlightVideo";
+import Error from "../../../General/Error";
 
 const Recap = ({ gameID }) => {
     const [showThumbnail, setShowThumbnail] = useState(true);
-    const { data, isLoading } = useQuery("content", () => fetchHighlights(gameID));
+    const { data, isLoading, isError } = useQuery("content", () => fetchHighlights(gameID));
 
     if (isLoading) return <Loading />;
+
+    if (isError) return <Error />;
 
     return (
         <View className="px-5">

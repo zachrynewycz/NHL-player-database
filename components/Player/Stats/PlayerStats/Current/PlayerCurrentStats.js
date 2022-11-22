@@ -3,16 +3,19 @@ import { useQuery } from "react-query";
 import { useContext } from "react";
 import { playerIDContext } from "../../../../../context/PlayerProvider";
 import { fetchCurrentYearPlayerStats } from "../../../../../api/fetchCurrentYearPlayerStats";
+import { format } from "date-fns";
+import Error from "../../../../General/Error";
 import Loading from "../../../../General/Loading";
 import Stat from "../../Stat";
 import SectionTitle from "../../../../General/SectionTitle";
-import { format } from "date-fns";
 
 const PlayerCurrentStats = () => {
     const [playerID] = useContext(playerIDContext);
-    const { data, isLoading } = useQuery("currentStats", () => fetchCurrentYearPlayerStats(playerID));
+    const { data, isLoading, isError } = useQuery("currentStats", () => fetchCurrentYearPlayerStats(playerID));
 
     if (isLoading) return <Loading />;
+
+    if (isError) return <Error />;
 
     return (
         <View className="px-5">

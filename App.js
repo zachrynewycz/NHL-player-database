@@ -10,8 +10,6 @@ import { QueryClientProvider, QueryClient } from "react-query";
 const Stack = createStackNavigator();
 const queryClient = new QueryClient();
 
-// TODO:
-
 export default function App() {
     return (
         <NavigationContainer>

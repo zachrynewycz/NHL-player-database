@@ -6,12 +6,15 @@ import { useContext } from "react";
 import SectionTitle from "../../../../General/SectionTitle";
 import Loading from "../../../../General/Loading";
 import StatTable from "./StatTable";
+import Error from "../../../../General/Error";
 
 const GoalieCareerStats = () => {
     const [playerID] = useContext(playerIDContext);
-    const { data, isLoading } = useQuery("careerStats", () => fetchPlayerStatsByYear(playerID));
+    const { data, isLoading, isError } = useQuery("careerStats", () => fetchPlayerStatsByYear(playerID));
 
     if (isLoading) return <Loading />;
+
+    if (isError) return <Error />;
 
     return (
         <View className="px-5">

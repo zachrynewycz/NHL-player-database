@@ -7,12 +7,15 @@ import { format } from "date-fns";
 import Loading from "../../../../General/Loading";
 import Stat from "../../Stat";
 import SectionTitle from "../../../../General/SectionTitle";
+import Error from "../../../../General/Error";
 
 const GoalieCurrentStats = () => {
     const [playerID] = useContext(playerIDContext);
-    const { data, isLoading } = useQuery("currentStats", () => fetchCurrentYearPlayerStats(playerID));
+    const { data, isLoading, isError } = useQuery("currentStats", () => fetchCurrentYearPlayerStats(playerID));
 
     if (isLoading) return <Loading />;
+
+    if (isError) return <Error />;
 
     return (
         <View className="px-5">

@@ -5,12 +5,15 @@ import { useContext } from "react";
 import Loading from "../../General/Loading";
 import ScrollBar from "../../General/StatScrollBar/ScrollBar";
 import ScrollItem from "../../General/StatScrollBar/ScrollItem";
+import Error from "../../General/Error";
 
 const Scrollbar = () => {
     const [teamID] = useContext(teamIDContext);
-    const { data, isLoading } = useQuery("stats", () => fetchTeamStats(teamID));
+    const { data, isLoading, isError } = useQuery("stats", () => fetchTeamStats(teamID));
 
     if (isLoading) return <Loading />;
+
+    if (isError) return <Error />;
 
     return (
         <ScrollBar>

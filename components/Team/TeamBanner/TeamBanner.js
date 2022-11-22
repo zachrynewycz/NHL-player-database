@@ -7,15 +7,18 @@ import { useQuery } from "react-query";
 import { fetchTeamStats } from "../../../api/fetchTeamStats";
 import teams from "../../../teams.json";
 import Loading from "../../General/Loading";
+import Error from "../../General/Error";
 
 const TeamBanner = () => {
     const [fontLoaded] = useFonts({ Poppins_700Bold });
     const [teamID] = useContext(teamIDContext);
-    const { data, isLoading } = useQuery("teamStats", () => fetchTeamStats(teamID));
+    const { data, isLoading, isError } = useQuery("teamStats", () => fetchTeamStats(teamID));
 
     if (!fontLoaded) return null;
 
     if (isLoading) return <Loading />;
+
+    if (isError) return <Error />;
 
     return (
         <View className="bg-white">

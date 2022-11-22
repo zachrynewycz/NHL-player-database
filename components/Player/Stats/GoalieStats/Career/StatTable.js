@@ -1,4 +1,4 @@
-import { Table, Row, Rows, TableWrapper } from "react-native-table-component";
+import { Table, Row, Rows, TableWrapper, Col } from "react-native-table-component";
 import teams from "../../../../../teams.json";
 
 const StatTable = ({ data }) => {
@@ -25,7 +25,7 @@ const StatTable = ({ data }) => {
         <Table>
             <Row
                 data={tableHead}
-                flexArr={[2, 2, 1, 1, 1, 1, 1]}
+                flexArr={[2, 2, 1, 1, 1, 1, 2]}
                 className="bg-neutral-900 px-2 py-4 rounded-t-md"
                 textStyle={{ color: "#FFFFFF", textAlign: "center" }}
             />
@@ -35,7 +35,7 @@ const StatTable = ({ data }) => {
 
                 <Rows
                     data={tableData}
-                    flexArr={[2, 1, 1, 1, 1, 1]}
+                    flexArr={[2, 1, 1, 1, 1, 2]}
                     className="py-4 border-b-[1px] border-neutral-200 bg-white px-2"
                     textStyle={{ textAlign: "center" }}
                 />
