@@ -1,21 +1,23 @@
 import { ScrollView, SafeAreaView } from "react-native";
-import PlayerBanner from "./Banner/PlayerBanner";
-import GoalieCurrentStats from "./Stats/GoalieStats/Current/GoalieCurrentStats";
-import GoalieCareerStats from "./Stats/GoalieStats/Career/GoalieCareerStats";
-import PlayerCareerStats from "./Stats/PlayerStats/Career/PlayerCareerStats";
-import PlayerCurrentStats from "./Stats/PlayerStats/Current/PlayerCurrentStats";
-import VitalsBar from "./VitalsBar/VitalsBar";
-import SectionBreak from "../General/SectionBreak";
+import PlayerVitals from "./PlayerVitals";
+import SectionBreak from "../shared/SectionBreak";
+import PlayerProfileBanner from "./PlayerProfileBanner";
+import { useContext } from "react";
+import { playerIDContext } from "../../context/PlayerProvider";
+import CurrentStats from "./stats/current/CurrentStats";
+import GoalieCareerStats from "./stats/career/GoalieCareerStats";
+import PlayerCareerStats from "./stats/career/PlayerCareerStats";
 
 const PlayerScreen = ({ route }) => {
     const { isGoalie } = route.params;
+    const [playerID] = useContext(playerIDContext);
 
     return (
         <SafeAreaView>
             <ScrollView className="bg-[#f9f9fb]">
-                <PlayerBanner />
-                <VitalsBar />
-                {isGoalie ? <GoalieCurrentStats /> : <PlayerCurrentStats />}
+                <PlayerProfileBanner queryKey="player" id={playerID} />
+                <PlayerVitals queryKey="vitals" id={playerID} />
+                <CurrentStats queryKey="currentStats" id={playerID} isGoalie={isGoalie} />
                 <SectionBreak />
                 {isGoalie ? <GoalieCareerStats /> : <PlayerCareerStats />}
                 <SectionBreak />

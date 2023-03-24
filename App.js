@@ -1,6 +1,6 @@
-import HomeScreen from "./components/Home/HomeScreen";
-import TeamScreen from "./components/Team/TeamScreen";
-import PlayerScreen from "./components/Player/PlayerScreen";
+import TeamScreen from "./components/team/TeamScreen";
+import TeamSelection from "./components/teamSelection/TeamSelection";
+import PlayerScreen from "./components/player/PlayerScreen";
 import TeamProvider from "./context/TeamProvider";
 import PlayerProvider from "./context/PlayerProvider";
 import { NavigationContainer } from "@react-navigation/native";
@@ -17,7 +17,7 @@ export default function App() {
                 <TeamProvider>
                     <PlayerProvider>
                         <Stack.Navigator screenOptions={{ headerShown: false }}>
-                            <Stack.Screen name="Home" component={HomeScreen} />
+                            <Stack.Screen name="Select" component={TeamSelection} />
                             <Stack.Screen name="Team" component={TeamScreen} />
                             <Stack.Screen name="Player" component={PlayerScreen} />
                         </Stack.Navigator>

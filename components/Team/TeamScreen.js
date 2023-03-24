@@ -1,19 +1,25 @@
 import { ScrollView, SafeAreaView } from "react-native";
-import Roster from "./Roster/Roster";
-import TeamBanner from "./TeamBanner/TeamBanner";
-import LastGame from "./LastGame/LastGame";
-import Scrollbar from "./StatsScrollBar/Scrollbar";
-import SectionBreak from "../General/SectionBreak";
+import { useContext } from "react";
+
+import TeamProfileBanner from "./TeamProfileBanner";
+import TeamStatsScrollBar from "./statsScrollBar/TeamStatsScrollBar";
+import PrevGame from "./previousGame/PrevGame";
+import SectionBreak from "../shared/SectionBreak";
+import Roster from "./roster/Roster";
+
+import { teamIDContext } from "../../context/TeamProvider";
 
 const TeamScreen = () => {
+    const [teamID] = useContext(teamIDContext);
+
     return (
         <SafeAreaView>
             <ScrollView className="bg-[#f9f9fb]">
-                <TeamBanner />
-                <Scrollbar />
-                <LastGame />
+                <TeamProfileBanner queryKey="teamStats" id={teamID} />
+                <TeamStatsScrollBar queryKey="stats" id={teamID} />
+                <PrevGame queryKey="lastGame" id={teamID} />
                 <SectionBreak />
-                <Roster />
+                <Roster queryKey="roster" id={teamID} />
                 <SectionBreak />
             </ScrollView>
         </SafeAreaView>

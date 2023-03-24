@@ -1,8 +1,8 @@
 import { Text, View } from "react-native";
-import { useFonts, Poppins_500Medium } from "@expo-google-fonts/poppins";
+import usePoppinsFonts from "../../../hooks/usePoppinsFonts";
 
 const Header = () => {
-    const [fontsLoaded] = useFonts({ Poppins_500Medium });
+    const fontsLoaded = usePoppinsFonts();
 
     if (!fontsLoaded) return null;
 
